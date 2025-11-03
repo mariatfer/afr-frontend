@@ -25,7 +25,4 @@ export const pages: ModuleOptions['pages'] = {
   contact: {
     es: '/contacto',
   },
-  'thank-you': {
-    es: '/gracias',
-  },
 }

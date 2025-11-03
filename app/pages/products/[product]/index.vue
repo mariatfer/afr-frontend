@@ -53,13 +53,19 @@ if (productData.value) {
           />
         </section>
       </article>
-      <article class="product__sides">
-        <ViewsSharedQuoteForm
-          v-if="productLocales.quoteForm && productData"
-          :locales="productLocales.quoteForm"
-          form-type="quote"
-          :product-name="productData.name"
-        />
+      <article class="product__sides product__sides--right">
+        <template v-if="productData && productLocales">
+          <ViewsSharedQuoteForm
+            v-if="productData.name && productLocales.quoteForm"
+            :locales="productLocales.quoteForm"
+            form-type="quote"
+            :product-name="productData.name"
+          />
+          <ViewsProductsAvailableSoon
+            v-else-if="!productData.available && productLocales.availableSoon"
+            v-bind="productLocales.availableSoon"
+          />
+        </template>
       </article>
     </section>
   </div>
@@ -67,7 +73,7 @@ if (productData.value) {
 
 <style lang="scss" scoped>
 .product {
-  @include flex($align: flex-start, $gap: 2rem);
+  @include flex($align: stretch, $gap: 2rem);
   padding: 0 var(--s-padding);
   margin: 0 0 var(--s-margin) 0;
 
@@ -82,6 +88,10 @@ if (productData.value) {
     width: 50%;
     @include responsive() {
       width: 100%;
+    }
+
+    &--right {
+      @include flex(column);
     }
   }
 

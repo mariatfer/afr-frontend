@@ -67,7 +67,11 @@ defineProps<{
     width: 25rem;
     max-width: 25rem;
     height: 10rem;
-    object-fit: contain;
+    object-fit: scale-down;
+    margin: 4rem 0;
+    @include responsive() {
+      margin: 1rem 0 0 0;
+    }
   }
 
   &__image {

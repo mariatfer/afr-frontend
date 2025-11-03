@@ -18,6 +18,7 @@ const { productUrl } = useAppUrls()
     <div class="fakeblob"></div>
     <section class="product-card__content">
       <NuxtImg
+        v-if="product.productImage"
         :src="product.productImage.url"
         :alt="product.productImage.alternativeText"
         :title="product.productImage.alternativeText"

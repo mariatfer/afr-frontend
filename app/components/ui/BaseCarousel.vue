@@ -52,7 +52,8 @@ const carouselData = props.carousel?.map((item) =>
           :src="carouselItem.url"
           :alt="carouselItem.alternativeText"
           :title="carouselItem.alternativeText"
-          :placeholder="carouselItem.placeholder"
+          placeholder="/original-logo.svg"
+          placeholder-class="carousel__placeholder"
           fetchpriority="high"
           preload
           sizes="100vw"
@@ -100,7 +101,9 @@ const carouselData = props.carousel?.map((item) =>
     position: relative;
     @include flex($align: stretch);
   }
-
+  &__placeholder {
+    object-fit: scale-down;
+  }
   .swiper-button-next,
   .swiper-button-prev {
     color: var(--c-primary);
