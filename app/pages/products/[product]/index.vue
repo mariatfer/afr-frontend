@@ -56,7 +56,7 @@ if (productData.value) {
       <article class="product__sides product__sides--right">
         <template v-if="productData && productLocales">
           <ViewsSharedQuoteForm
-            v-if="productData.name && productLocales.quoteForm"
+            v-if="productData.available && productLocales.quoteForm"
             :locales="productLocales.quoteForm"
             form-type="quote"
             :product-name="productData.name"
