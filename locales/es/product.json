@@ -2,5 +2,9 @@
   "quoteForm": {
     "title": "Solicitar de presupuesto",
     "buttonLabel": "Solicitar"
+  },
+  "availableSoon": {
+    "title": "Disponible próximamente",
+    "description": "Este producto estará disponible pronto. ¡Mantente atento para más actualizaciones!"
   }
 }
