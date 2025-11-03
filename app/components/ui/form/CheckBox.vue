@@ -64,7 +64,7 @@ const modelValue = defineModel<boolean>()
     font-weight: 500;
 
     &:hover &__span:first-child {
-      border-color: var(--c-dark);
+      border-color: var(--c-dark-blue);
     }
   }
 

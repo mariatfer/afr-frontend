@@ -22,7 +22,8 @@ defineProps<{
       sizes="100vw"
       width="1696"
       height="562"
-      placeholder
+      placeholder="/original-logo.svg"
+      placeholder-class="hero__placeholder"
       quality="85"
       class="hero__image"
       :class="{ 'hero__image--border': padding }"
@@ -60,7 +61,9 @@ defineProps<{
       border-radius: var(--s-border-radius);
     }
   }
-
+  &__placeholder {
+    object-fit: scale-down;
+  }
   &__content {
     grid-column: 1;
     grid-row: 1;

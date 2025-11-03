@@ -60,7 +60,8 @@ const { Swiper, SwiperSlide, modules } = useSwiper()
           :src="product.productImage.url"
           :alt="product.productImage.alternativeText"
           :title="product.productImage.alternativeText"
-          :placeholder="product.productImage.placeholder"
+          placeholder="/original-logo.svg"
+          placeholder-class="carousel__placeholder"
           fetchpriority="high"
           preload
           sizes="192px"
@@ -106,7 +107,9 @@ const { Swiper, SwiperSlide, modules } = useSwiper()
     border: 0.125rem solid var(--c-light-graphite);
     transition: var(--t-transition);
   }
-
+  &__placeholder {
+    object-fit: scale-down;
+  }
   &__product {
     text-align: center;
     margin: 0.5rem auto;
