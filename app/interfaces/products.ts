@@ -10,6 +10,7 @@ export interface Product {
   slug: string
   title: string
   productImage: Image
+  available: boolean
   productCarousel: Carousel[]
   accordion: AccordionItem[]
   seo: SEO
@@ -19,7 +20,11 @@ export interface ProductsPage {
   hero: Hero
   seo: SEO
 }
-
+export interface AvailableSoon {
+  title: string
+  description: string
+}
 export interface ProductLocales {
   quoteForm: QuoteForm
+  availableSoon: AvailableSoon
 }
